@@ -37,7 +37,6 @@ namespace DemoWEB
             WMTClient wmt1 = new WMTClient();
             wmt1.Create(WebServiceType.BingHybrid);
 
-
             string WMSServerWMS0 = "http://maps.ngdc.noaa.gov/soap/web_mercator/marine_geology/MapServer/WMSServer";
             WMSClient wms0 = new WMSClient();
 
@@ -53,8 +52,7 @@ namespace DemoWEB
             wms1.ReadCapabilities(WMSServerWMS1);
             wms1.CRS = "EPSG:3857";
             wms1.Projection = KnownCoordinateSystems.Projected.World.WebMercator;
-
-
+            
             client.AddService(wmt1);
             client.AddService(wms0);
             client.AddService(wms1);
