@@ -42,7 +42,7 @@ namespace DotSpatial.Serialization.Tests
     {
         #region Fields
 
-        private readonly List<string> _filesToRemove = new List<string>();
+        private static readonly List<string> _filesToRemove = new List<string>();
 
         #endregion
 
@@ -51,8 +51,8 @@ namespace DotSpatial.Serialization.Tests
         /// <summary>
         /// Deletes the temporary files.
         /// </summary>
-        [TestFixtureTearDown]
-        public void Clear()
+        [OneTimeTearDown]
+        public static void Clear()
         {
             foreach (var tempFile in _filesToRemove)
             {

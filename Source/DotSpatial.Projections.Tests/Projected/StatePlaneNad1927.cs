@@ -9,15 +9,6 @@ namespace DotSpatial.Projections.Tests.Projected
     [Ignore("Tests fails only on x64. It seems proj.dll issue.")]
     public class StatePlaneNad1927
     {
-        /// <summary>
-        /// Creates a new instance of the Africa Class
-        /// </summary>
-        [TestFixtureSetUp]
-        public void Initialize()
-        {
-            
-        }
-
         [Test]
         public void NAD1927StatePlaneAlabamaEastFIPS0101()
         {

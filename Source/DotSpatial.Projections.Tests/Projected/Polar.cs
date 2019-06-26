@@ -8,17 +8,6 @@ namespace DotSpatial.Projections.Tests.Projected
     [TestFixture]
     public class Polar
     {
-
-        /// <summary>
-        /// Creates a new instance of the Africa Class
-        /// </summary>
-        [TestFixtureSetUp]
-        public void Initialize()
-        {
-            
-        }
-
-
         [Test]
         public void NorthPoleAzimuthalEquidistant()
         {

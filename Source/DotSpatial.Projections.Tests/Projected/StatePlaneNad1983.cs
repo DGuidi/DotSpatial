@@ -9,16 +9,6 @@ namespace DotSpatial.Projections.Tests.Projected
     [TestFixture]
     public class StatePlaneNad1983
     {
-
-        /// <summary>
-        /// Creates a new instance of the Africa Class
-        /// </summary>
-        [TestFixtureSetUp]
-        public void Initialize()
-        {
-            
-        }
-
         [Test]
         public void MichiganGeoRef2008()
         {

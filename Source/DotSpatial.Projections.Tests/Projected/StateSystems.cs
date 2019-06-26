@@ -9,15 +9,6 @@ namespace DotSpatial.Projections.Tests.Projected
     [TestFixture]
     public class StateSystems
     {
-        /// <summary>
-        /// Creates a new instance of the Africa Class
-        /// </summary>
-        [TestFixtureSetUp]
-        public void Initialize()
-        {
-            
-        }
-
         [Test]
         [Ignore("Doesn't work on x64 TeamCity. x86 is fine.")]
         public void NAD1927AlaskaAlbersFeet()
