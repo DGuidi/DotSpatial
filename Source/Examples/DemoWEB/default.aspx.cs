@@ -30,32 +30,25 @@ namespace DemoWEB
             WebMap1.Projection = KnownCoordinateSystems.Projected.World.WebMercator;
             WebMap1.MapViewExtents = new Extent(-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789);
 
-
             WebMapClient client = new WebMapClient();
-
 
             WMTClient wmt1 = new WMTClient();
             wmt1.Create(WebServiceType.BingHybrid);
-
-            string WMSServerWMS0 = "http://maps.ngdc.noaa.gov/soap/web_mercator/marine_geology/MapServer/WMSServer";
-            WMSClient wms0 = new WMSClient();
-
-            wms0.ReadCapabilities(WMSServerWMS0);
-            wms0.CRS = "EPSG:3857";
-            wms0.Projection = KnownCoordinateSystems.Projected.World.WebMercator;
-
-
-            string WMSServerWMS1 = "http://maps.ngdc.noaa.gov/soap/web_mercator/graticule/MapServer/WMSServer";
-
-            WMSClient wms1 = new WMSClient();
-
-            wms1.ReadCapabilities(WMSServerWMS1);
-            wms1.CRS = "EPSG:3857";
-            wms1.Projection = KnownCoordinateSystems.Projected.World.WebMercator;
-            
             client.AddService(wmt1);
-            client.AddService(wms0);
-            client.AddService(wms1);
+
+            //string WMSServerWMS0 = "http://maps.ngdc.noaa.gov/soap/web_mercator/marine_geology/MapServer/WMSServer";
+            //WMSClient wms0 = new WMSClient();
+            //wms0.ReadCapabilities(WMSServerWMS0);
+            //wms0.CRS = "EPSG:3857";
+            //wms0.Projection = KnownCoordinateSystems.Projected.World.WebMercator;
+            //client.AddService(wms0);
+
+            //string WMSServerWMS1 = "http://maps.ngdc.noaa.gov/soap/web_mercator/graticule/MapServer/WMSServer";
+            //WMSClient wms1 = new WMSClient();
+            //wms1.ReadCapabilities(WMSServerWMS1);
+            //wms1.CRS = "EPSG:3857";
+            //wms1.Projection = KnownCoordinateSystems.Projected.World.WebMercator;
+            //client.AddService(wms1);
 
             WebMap1.Back = client;
 
